@@ -8,6 +8,14 @@ let database = [
 	{
 		username: "john",
 		password: "guessmypassword"
+	},
+	{
+		username: "kevin",
+		password: "accounting"
+	},
+	{
+		username: "jim",
+		password: "pambeasley"
 	}
 ];
 
@@ -28,12 +36,23 @@ let newsFeed = [
 
 let userNamePrompt = prompt("Whats your user name?");
 let passwordPrompt = prompt("Whats your password?");
+function isUserValid(username, password){
+	for(let i=0; i < database.length; i++){
+		if(database[i].username === username &&
+			database[i].password === password){
+			return true;
+			}
+	}
+	return false;
+}
 
-function signIn(user, pass) {
-	if(user === database[0].username &&
-	   pass === database[0].password) {
+function signIn(username, password) {
+	if(isUserValid(username, password)) {
 		console.log(newsFeed)
 	}else {
 		alert("Sorry, incorrect username and password.")
 	}
 }
+
+signIn(userNamePrompt, passwordPrompt)
+
