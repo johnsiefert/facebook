@@ -25,3 +25,6 @@ let newsFeed = [
 		timeline: "Javascript is pretty cool!"
 	}
 ];
+
+let userNamePrompt = prompt("Whats your user name?");
+let passwordPrompt = prompt("Whats your password?");
