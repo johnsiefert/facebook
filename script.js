@@ -28,3 +28,12 @@ let newsFeed = [
 
 let userNamePrompt = prompt("Whats your user name?");
 let passwordPrompt = prompt("Whats your password?");
+
+function signIn(user, pass) {
+	if(user === database[0].username &&
+	   pass === database[0].password) {
+		console.log(newsFeed)
+	}else {
+		alert("Sorry, incorrect username and password.")
+	}
+}
